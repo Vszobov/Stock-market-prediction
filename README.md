@@ -9,18 +9,15 @@ This project aims to predict stock growth by leveraging Earnings Call transcript
 ## Objectives
 
 1. **Construct a Profitable Portfolio**: Utilize Earnings Call transcripts and financial data to create a portfolio that consistently outperforms the market.
-2. **Enhance Investment Decisions**: Integrate NLP model results with financial metrics to improve the accuracy and reliability of stock growth predictions.
-3. **Automate Portfolio Management**: Develop a fully automated system for constructing and managing a profitable portfolio, minimizing the need for human intervention.
-4. **Support Professional Portfolio Managers**: Provide predicted probabilities to compare different stocks, serving as a valuable tool for professional portfolio managers to make informed investment decisions.
+2. **Automate Portfolio Management**: Develop a fully automated system for constructing and managing a profitable portfolio, minimizing the need for human intervention.
 
 ## Data Collection
 
 ### Textual Data
 - **Source**: Earnings Call transcripts.
 - **Processing**: 
-  - Remove non-informative phrases, such as those from the call operator and any greetings or goodbyes.
-  - Clean and preprocess text for NLP modeling.
-
+  - Remove non-informative phrases, such as those from the call operator, and any greetings or goodbyes.
+  
 ### Financial Data
 - **Source**: Company financial reports.
 - **Processing**:
@@ -35,16 +32,17 @@ This project aims to predict stock growth by leveraging Earnings Call transcript
 ## Model Training
 
 ### NLP Model
-- Train the NLP model on cleaned Earnings Call transcripts.
+- Train the NLP model on Earnings Call transcripts.
 - Evaluate the model using precision to focus on the proportion of correctly predicted growing stocks in our portfolio.
+- Test portfolio profitability compared to the market.
 
 ### Financials Model
 - Use the results of the NLP model as input.
-- Integrate financial data to train a statistical learning model, enhancing prediction accuracy.
+- Integrate financial data to train another model, enhancing prediction accuracy.
+- Evaluate the same way as in NLP Model and compare results
 
 ## Evaluation
 
-- **Precision**: Use precision on the top 100 stocks with the highest predicted probability of growth for each period.
 - **Comparison with Market**: Compare model performance against the market to ensure it consistently outperforms.
 
 ## Implementation Steps
@@ -55,13 +53,11 @@ This project aims to predict stock growth by leveraging Earnings Call transcript
    - Run `NLP_Model.ipynb` to train the model on Earnings Call transcripts.
 3. **Financials Model Training**:
    - Execute `Financials_Model.ipynb` to train the statistical learning model using NLP model predictions and financial data.
-4. **Evaluation**:
-   - Assess model performance using precision and market comparison metrics.
 
 ## Usage
 
 - **Portfolio Construction**: Use the model to construct a profitable portfolio without manual intervention.
-- **Professional Use**: Utilize predicted probabilities to compare different stocks, aiding professional portfolio managers in decision-making.
+- **Professional Use**: Also, professionals whi are taking many factors into account can use model outputs as one of the data sources in their work.
 
 ## Conclusion
 
